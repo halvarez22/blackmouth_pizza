@@ -24,19 +24,19 @@ const UsersIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 const ReservationsPage: React.FC = () => {
   return (
-    <div className="pt-24 md:pt-32 bg-black min-h-screen">
-      <section className="relative hero-bg bg-cover bg-center py-20 md:py-32">
+    <div className="pt-20 sm:pt-24 md:pt-32 bg-black min-h-screen">
+      <section className="relative hero-bg bg-cover bg-center py-16 sm:py-20 md:py-32">
         <div className="absolute inset-0 bg-black/70"></div>
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white">Asegura tu Mesa</h1>
-          <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white">Asegura tu Mesa</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto px-4">
             Estás a un paso de vivir la auténtica experiencia Blackmouth. Elige tu momento perfecto.
           </p>
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-20 md:py-24">
-        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+        <div className="grid lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16">
           <div className="lg:col-span-2">
              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center lg:text-left">Completa tu Reserva</h2>
             <ReservationForm />

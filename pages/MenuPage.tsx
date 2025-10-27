@@ -212,19 +212,19 @@ const MenuPage: React.FC<MenuPageProps> = ({ menuData, order, onAddToOrder, onRe
     const inactiveBtnClasses = "bg-[#2a2a2a] text-gray-300 hover:bg-[#3a3a3a]";
 
     return (
-        <div className="pt-24 md:pt-32 bg-[#0a0a0a] min-h-screen">
-            <section className="relative hero-bg bg-cover bg-center py-20 md:py-32">
+        <div className="pt-20 sm:pt-24 md:pt-32 bg-[#0a0a0a] min-h-screen">
+            <section className="relative hero-bg bg-cover bg-center py-16 sm:py-20 md:py-32">
                 <div className="absolute inset-0 bg-black/70"></div>
-                <div className="relative z-10 container mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white">Nuestra Carta</h1>
-                    <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white">Nuestra Carta</h1>
+                    <p className="text-base sm:text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto px-4">
                         Un viaje de sabor em cada bocado. Ingredientes frescos, masa artesanal y pasión en nuestro horno.
                     </p>
                 </div>
             </section>
 
-            <section className="container mx-auto px-6 -mt-16 relative z-20">
-                <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-4 md:p-6 shadow-lg space-y-6">
+            <section className="container mx-auto px-4 sm:px-6 -mt-12 sm:-mt-16 relative z-20">
+                <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-4 md:p-6 shadow-lg space-y-4 sm:space-y-6">
                     <div>
                         <div className="flex justify-between items-center mb-3">
                             <h3 className="font-semibold text-white text-sm uppercase tracking-wider">Buscar</h3>
@@ -296,8 +296,8 @@ const MenuPage: React.FC<MenuPageProps> = ({ menuData, order, onAddToOrder, onRe
                 </div>
             </section>
 
-            <section id="full-menu" className="py-12 md:py-16">
-                <div className="container mx-auto px-6 max-w-4xl pb-24"> {/* Added padding-bottom */}
+            <section id="full-menu" className="py-8 sm:py-12 md:py-16">
+                <div className="container mx-auto px-4 sm:px-6 max-w-4xl pb-20 sm:pb-24"> {/* Added padding-bottom */}
                     <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-4 md:p-8">
                         <div className="divide-y divide-gray-800">
                             {filteredMenu.length > 0 ? (
@@ -322,28 +322,28 @@ const MenuPage: React.FC<MenuPageProps> = ({ menuData, order, onAddToOrder, onRe
 
             {/* Sticky Order Button */}
             {totalItems > 0 && (
-                <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center space-y-2">
+                <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center space-y-2 px-4">
                     <button
                         onClick={onClearOrder}
-                        className="bg-red-600 text-white rounded-full shadow-2xl shadow-black/50 hover:bg-red-500 transition-all duration-300 transform hover:scale-105 animate-fade-in-pop px-4 py-2 text-sm font-bold uppercase tracking-wider"
+                        className="bg-red-600 text-white rounded-full shadow-2xl shadow-black/50 hover:bg-red-500 transition-all duration-300 transform hover:scale-105 animate-fade-in-pop px-3 py-2 sm:px-4 text-xs sm:text-sm font-bold uppercase tracking-wider"
                         aria-label="Vaciar carrito"
                     >
                         Vaciar Carrito
                     </button>
                     <a
                         href="#/delivery"
-                        className="flex items-center justify-between bg-orange-600 text-white rounded-full shadow-2xl shadow-black/50 hover:bg-orange-500 transition-all duration-300 transform hover:scale-105 animate-fade-in-pop w-[90%] max-w-sm"
+                        className="flex items-center justify-between bg-orange-600 text-white rounded-full shadow-2xl shadow-black/50 hover:bg-orange-500 transition-all duration-300 transform hover:scale-105 animate-fade-in-pop w-full max-w-xs sm:max-w-sm"
                     >
-                        <div className="flex items-center pl-4 pr-3 py-2">
-                            <ShoppingCartIcon className="w-5 h-5 mr-2" />
-                            <span className="bg-white text-orange-600 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                        <div className="flex items-center pl-3 pr-2 py-2 sm:pl-4 sm:pr-3">
+                            <ShoppingCartIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                            <span className="bg-white text-orange-600 text-xs font-bold rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
                                 {totalItems}
                             </span>
                         </div>
-                        <span className="font-bold uppercase tracking-wider text-sm">
+                        <span className="font-bold uppercase tracking-wider text-xs sm:text-sm px-2">
                             Realizar Pedido
                         </span>
-                        <span className="font-bold text-sm bg-black/20 rounded-r-full px-4 py-3 ml-4">
+                        <span className="font-bold text-xs sm:text-sm bg-black/20 rounded-r-full px-3 py-3 ml-2 sm:ml-4">
                             ${totalCost.toFixed(2)}
                         </span>
                     </a>

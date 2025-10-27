@@ -29,10 +29,10 @@ const ClockIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-20 md:py-32 bg-black text-center">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Visítanos o Contáctanos</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+    <section id="contact" className="py-16 sm:py-20 md:py-32 bg-black text-center">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Visítanos o Contáctanos</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-8 px-4 text-sm sm:text-base">
           Tu mesa te espera. Ven a vivir la experiencia Blackmouth.
         </p>
         <div className="text-lg text-white space-y-2 mb-8">

@@ -123,19 +123,19 @@ const DeliveryPage: React.FC<DeliveryPageProps> = ({ order, totalItems, totalCos
     }
 
     return (
-        <div className="pt-24 md:pt-32 bg-[#0a0a0a] min-h-screen">
-            <section className="relative hero-bg bg-cover bg-center py-20 md:py-32">
-                <div className="absolute inset-0 bg-black/70"></div>
-                <div className="relative z-10 container mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white">Pedido a Domicilio</h1>
-                    <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
-                        Disfruta de nuestras pizzas en la comodidad de tu hogar. Entrega rápida y segura.
-                    </p>
-                </div>
-            </section>
+      <div className="pt-20 sm:pt-24 md:pt-32 bg-[#0a0a0a] min-h-screen">
+        <section className="relative hero-bg bg-cover bg-center py-16 sm:py-20 md:py-32">
+          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white">Pedido a Domicilio</h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto px-4">
+              Disfruta de nuestras pizzas en la comodidad de tu hogar. Entrega rápida y segura.
+            </p>
+          </div>
+        </section>
 
-            <section className="container mx-auto px-6 py-20 md:py-24">
-                <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+            <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+                <div className="grid lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16">
                     <div className="lg:col-span-2">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center lg:text-left">Completa tu Pedido</h2>
 

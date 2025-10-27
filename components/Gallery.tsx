@@ -43,13 +43,13 @@ const Gallery: React.FC = () => {
   }, []);
 
   return (
-    <section id="gallery" className="py-20 md:py-32 bg-[#0a0a0a]">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Desde el Fuego</h2>
-          <p className="text-gray-400 mt-4 max-w-xl mx-auto">Momentos capturados de nuestra pasión por la pizza.</p>
+    <section id="gallery" className="py-16 sm:py-20 md:py-32 bg-[#0a0a0a]">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Desde el Fuego</h2>
+          <p className="text-gray-400 mt-4 max-w-xl mx-auto px-4 text-sm sm:text-base">Momentos capturados de nuestra pasión por la pizza.</p>
         </div>
-        <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
           {pizzaTypes.map((pizza, index) => (
             <div
               key={index}

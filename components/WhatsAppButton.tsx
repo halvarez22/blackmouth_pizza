@@ -12,10 +12,10 @@ const WhatsAppButton: React.FC = () => {
             href="https://wa.me/772444974"
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 transform hover:scale-110 animate-pulse"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-3 sm:p-4 shadow-lg transition-all duration-300 transform hover:scale-110 animate-pulse"
             aria-label="Contactar por WhatsApp"
         >
-            <WhatsAppIcon className="w-6 h-6" />
+            <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6" />
         </a>
     );
 };
