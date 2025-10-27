@@ -36,6 +36,7 @@ const Header: React.FC<HeaderProps> = ({ totalItems = 0, totalCost = 0 }) => {
 
   const navLinks = [
     { name: 'Nuestra Esencia', href: '#about' },
+    { name: 'Obras Maestras', href: '#menu' },
     { name: 'Carta', href: '#/menu' },
     { name: 'Galería', href: '#gallery' },
     { name: 'Reservas', href: '#/reservas' },

@@ -28,17 +28,17 @@ const MenuHighlight: React.FC = () => {
     {
       name: 'Margherita Verace',
       description: 'La reina de Nápoles. Tomate San Marzano, mozzarella fior di latte, albahaca fresca y aceite de oliva virgen extra.',
-      imageUrl: 'https://picsum.photos/600/400?random=3',
+      imageUrl: '/images/Margherita Verace.jpg',
     },
     {
       name: 'Diavola Blackmouth',
       description: 'Nuestro toque picante. Salami Spianata, mozzarella, nduja de Calabria y un toque de miel picante.',
-      imageUrl: 'https://picsum.photos/600/400?random=4',
+      imageUrl: '/images/Diavola Blackmouth.jpg',
     },
     {
       name: 'Tartufo e Funghi',
       description: 'Un lujo terrenal. Crema de trufa negra, champiñones portobello, mozzarella y lascas de parmesano.',
-      imageUrl: 'https://picsum.photos/600/400?random=5',
+      imageUrl: '/images/Tartufo e Funghi.jpg',
     },
   ];
 
