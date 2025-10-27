@@ -1,0 +1,11 @@
+/* Custom styles for Blackmouth Pizzeria */
+/* Additional custom styles can be added here */
+
+.hero-bg {
+    background-image: url('/images/portada.jpeg');
+}
+
+.about-bg {
+    background-image: url('/images/portada_2.jpeg');
+}
+

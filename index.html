@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackmouth Pizzeria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: #e5e5e5;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      .hero-bg {
+        background-image: url('https://picsum.photos/1920/1280?random=1');
+      }
+      .about-bg {
+        background-image: url('https://picsum.photos/1000/1500?random=2');
+      }
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-3px); }
+        75% { transform: translateX(3px); }
+      }
+      .animate-shake {
+          animation: shake 0.3s ease-in-out;
+      }
+      @keyframes fadeInPop {
+        0% { opacity: 0; transform: scale(0.9); }
+        80% { opacity: 1; transform: scale(1.02); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+      .animate-fade-in-pop {
+          animation: fadeInPop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+          animation: fadeIn 1s ease-out forwards;
+      }
+      @keyframes pop {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.5); color: #fb923c; /* orange-400 */ }
+        100% { transform: scale(1); }
+      }
+      .animate-pop {
+        animation: pop 0.3s ease-out;
+      }
+      .feedback-button:active {
+        transform: scale(0.9);
+        transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
