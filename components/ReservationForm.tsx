@@ -3,7 +3,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { GoogleGenAI, Type } from "@google/genai";
 
 // Fix: Initialize Gemini AI outside the component to avoid re-creation on every render.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+// Only initialize if API key is available (for production deployments)
+const ai = process.env.API_KEY ? new GoogleGenAI({ apiKey: process.env.API_KEY as string }) : null;
 
 const InfoIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -82,6 +83,15 @@ const ReservationForm: React.FC = () => {
     setAvailableTimes([]);
     setTime('');
 
+    // If AI is not available, use fallback times immediately
+    if (!ai) {
+      const fallbackTimes = ['19:00', '19:30', '20:00', '21:00', '21:30', '22:00'];
+      setAvailableTimes(fallbackTimes);
+      setTime(fallbackTimes[0]);
+      setLoadingTimes(false);
+      return;
+    }
+
     try {
       const prompt = `
         Somos una pizzería napolitana llamada Blackmouth Pizzeria en Barcelona.
@@ -90,9 +100,9 @@ const ReservationForm: React.FC = () => {
         - Viernes y Sábado: 13:00 - 00:00
         - Domingo: 13:00 - 22:00
         Las horas de mayor afluencia son entre las 20:30 y las 22:00.
-        
+
         Un cliente quiere reservar una mesa para ${diners} personas el ${new Date(date).toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}.
-        
+
         Genera una lista de 5-7 horarios de reserva disponibles, en intervalos de 30 minutos. Ten en cuenta nuestro horario y las horas punta para ofrecer alternativas. Asegúrate que los horarios sean válidos para el día de la semana seleccionado. Devuelve solo un array de strings en formato JSON con las horas ("HH:MM").
       `;
 
@@ -110,10 +120,10 @@ const ReservationForm: React.FC = () => {
             }
         }
       });
-      
+
       const jsonText = response.text.trim();
       const times = JSON.parse(jsonText);
-      
+
       if (Array.isArray(times) && times.length > 0) {
         setAvailableTimes(times);
         setTime(times[0]);
