@@ -63,8 +63,8 @@ const ReservationsPage: React.FC = () => {
                         <MapPinIcon className="w-6 h-6 mr-4 text-orange-400 mt-1 flex-shrink-0" />
                         <div>
                             <h4 className="font-semibold text-white">Ubicación</h4>
-                            <p className="text-gray-400 mt-1">Calle Ficticia 123, 08001 Barcelona, España</p>
-                            <a href="#" className="text-orange-400 text-sm hover:underline mt-1 inline-block">Ver en el mapa</a>
+                            <p className="text-gray-400 mt-1">Av. Universidad 431-D, León Guanajuato, México, Frente a Universidad La Salle Bajío</p>
+                            <a href="#contact" className="text-orange-400 text-sm hover:underline mt-1 inline-block">Ver en el mapa</a>
                         </div>
                     </div>
 

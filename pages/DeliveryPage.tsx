@@ -255,7 +255,7 @@ const DeliveryPage: React.FC<DeliveryPageProps> = ({ order, totalItems, totalCos
                                     <TruckIcon className="w-6 h-6 mr-4 text-orange-400 mt-1 flex-shrink-0" />
                                     <div>
                                         <h4 className="font-semibold text-white">Zona de Entrega</h4>
-                                        <p className="text-gray-400 mt-1">Barcelona y alrededores (hasta 10km)</p>
+                                        <p className="text-gray-400 mt-1">En todo León, Gto.</p>
                                     </div>
                                 </div>
 
@@ -271,8 +271,8 @@ const DeliveryPage: React.FC<DeliveryPageProps> = ({ order, totalItems, totalCos
                                     <MapPinIcon className="w-6 h-6 mr-4 text-orange-400 mt-1 flex-shrink-0" />
                                     <div>
                                         <h4 className="font-semibold text-white">Costo de Envío</h4>
-                                        <p className="text-gray-400 mt-1">Gratis en pedidos superiores a $30</p>
-                                        <p className="text-gray-400 mt-1">$3.50 en pedidos menores</p>
+                                        <p className="text-gray-400 mt-1">Gratis en pedidos superiores a $ 220.00</p>
+                                        <p className="text-gray-400 mt-1">$ 25.00 en pedidos menores</p>
                                     </div>
                                 </div>
                             </div>

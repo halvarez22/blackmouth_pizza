@@ -218,7 +218,7 @@ const MenuPage: React.FC<MenuPageProps> = ({ menuData, order, onAddToOrder, onRe
                 <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white">Nuestra Carta</h1>
                     <p className="text-base sm:text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto px-4">
-                        Un viaje de sabor em cada bocado. Ingredientes frescos, masa artesanal y pasión en nuestro horno.
+                        Un viaje de sabor en cada bocado. Ingredientes frescos, masa artesanal y pasión en nuestro horno.
                     </p>
                 </div>
             </section>
